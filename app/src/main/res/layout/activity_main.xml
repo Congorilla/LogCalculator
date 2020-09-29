@@ -1,0 +1,193 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <EditText
+        android:id="@+id/diameter1"
+        android:layout_width="wrap_content"
+        android:layout_height="45dp"
+        android:layout_marginStart="18dp"
+        android:layout_marginEnd="184dp"
+        android:ems="10"
+        android:hint="Select units to start"
+        android:inputType="numberDecimal"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.059" />
+
+    <EditText
+        android:id="@+id/diameter2"
+        android:layout_width="wrap_content"
+        android:layout_height="45dp"
+        android:layout_marginStart="18dp"
+        android:layout_marginEnd="184dp"
+        android:ems="10"
+        android:hint="Select units to start"
+        android:inputType="numberDecimal"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.142" />
+
+    <EditText
+        android:id="@+id/length"
+        android:layout_width="wrap_content"
+        android:layout_height="45dp"
+        android:layout_marginStart="18dp"
+        android:ems="10"
+        android:hint="Select units to start"
+        android:inputType="numberDecimal"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.23" />
+
+    <EditText
+        android:id="@+id/water"
+        android:layout_width="wrap_content"
+        android:layout_height="45dp"
+        android:layout_marginStart="18dp"
+        android:layout_marginEnd="184dp"
+        android:ems="10"
+        android:hint="Select units to start"
+        android:inputType="numberDecimal"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.317" />
+
+
+    <RadioGroup
+        android:layout_width="143dp"
+        android:layout_height="255dp"
+        android:padding="0dp"
+        android:soundEffectsEnabled="false"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="1.0">
+
+        <RadioButton
+            android:id="@+id/oak"
+            android:layout_width="wrap_content"
+            android:layout_height="61dp"
+            android:onClick="oak"
+            android:text="Red Oak"
+            tools:layout_editor_absoluteX="16dp"
+            tools:layout_editor_absoluteY="349dp" />
+
+        <RadioButton
+            android:id="@+id/pine"
+            android:layout_width="wrap_content"
+            android:layout_height="61dp"
+            android:onClick="pine"
+            android:text="Lodgepole Pine"
+            android:textSize="14sp"
+            tools:layout_editor_absoluteX="16dp"
+            tools:layout_editor_absoluteY="396dp" />
+
+        <RadioButton
+            android:id="@+id/cherry"
+            android:layout_width="wrap_content"
+            android:layout_height="61dp"
+            android:onClick="cherry"
+            android:text="Black Cherry"
+            tools:layout_editor_absoluteX="16dp"
+            tools:layout_editor_absoluteY="447dp" />
+
+        <RadioButton
+            android:id="@+id/ash"
+            android:layout_width="wrap_content"
+            android:layout_height="61dp"
+            android:onClick="ash"
+            android:text="Green Ash"
+            tools:layout_editor_absoluteX="18dp"
+            tools:layout_editor_absoluteY="499dp" />
+
+    </RadioGroup>
+
+    <Button
+        android:id="@+id/calculate"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:onClick="calculate"
+        android:text="Let's Go!"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.698"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.888" />
+
+    <TextView
+        android:id="@+id/result"
+        android:layout_width="243dp"
+        android:layout_height="77dp"
+        android:lineSpacingExtra="11sp"
+        android:text="Select units to start"
+        android:textAlignment="center"
+        android:textSize="22sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.888"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.785" />
+
+    <RadioGroup
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.877"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.118">
+
+        <RadioButton
+            android:id="@+id/international"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="SI Units"
+            android:onClick="SIOn"
+            tools:layout_editor_absoluteX="270dp"
+            tools:layout_editor_absoluteY="61dp" />
+
+        <RadioButton
+            android:id="@+id/british"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Imperial Units"
+            android:onClick="ImpOn"
+            tools:layout_editor_absoluteX="270dp"
+            tools:layout_editor_absoluteY="129dp" />
+    </RadioGroup>
+
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="400dp"
+        android:layout_height="200dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.454"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.51"
+        app:srcCompat="@drawable/log_instruction" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
