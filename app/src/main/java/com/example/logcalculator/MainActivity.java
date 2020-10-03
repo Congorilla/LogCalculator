@@ -69,7 +69,7 @@ public class MainActivity extends AppCompatActivity {
         else{
             String woodspecie = woodspecieinput.getText().toString();
             int woodspecievalid = 1;
-            
+
             if(woodspecie.equalsIgnoreCase("red oak")){
                 densitypermoisture = 3.8;
                 drydensity = 597;
