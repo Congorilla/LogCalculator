@@ -69,86 +69,6 @@
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.317" />
 
-
-    <RadioGroup
-        android:layout_width="143dp"
-        android:layout_height="255dp"
-        android:padding="0dp"
-        android:soundEffectsEnabled="false"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="1.0">
-
-        <RadioButton
-            android:id="@+id/oak"
-            android:layout_width="wrap_content"
-            android:layout_height="61dp"
-            android:onClick="oak"
-            android:text="Red Oak"
-            tools:layout_editor_absoluteX="16dp"
-            tools:layout_editor_absoluteY="349dp" />
-
-        <RadioButton
-            android:id="@+id/pine"
-            android:layout_width="wrap_content"
-            android:layout_height="61dp"
-            android:onClick="pine"
-            android:text="Lodgepole Pine"
-            android:textSize="14sp"
-            tools:layout_editor_absoluteX="16dp"
-            tools:layout_editor_absoluteY="396dp" />
-
-        <RadioButton
-            android:id="@+id/cherry"
-            android:layout_width="wrap_content"
-            android:layout_height="61dp"
-            android:onClick="cherry"
-            android:text="Black Cherry"
-            tools:layout_editor_absoluteX="16dp"
-            tools:layout_editor_absoluteY="447dp" />
-
-        <RadioButton
-            android:id="@+id/ash"
-            android:layout_width="wrap_content"
-            android:layout_height="61dp"
-            android:onClick="ash"
-            android:text="Green Ash"
-            tools:layout_editor_absoluteX="18dp"
-            tools:layout_editor_absoluteY="499dp" />
-
-    </RadioGroup>
-
-    <Button
-        android:id="@+id/calculate"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:onClick="calculate"
-        android:text="Let's Go!"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.698"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.888" />
-
-    <TextView
-        android:id="@+id/result"
-        android:layout_width="243dp"
-        android:layout_height="77dp"
-        android:lineSpacingExtra="11sp"
-        android:text="Select units to start"
-        android:textAlignment="center"
-        android:textSize="22sp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.888"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.785" />
-
     <RadioGroup
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -179,7 +99,7 @@
     </RadioGroup>
 
     <ImageView
-        android:id="@+id/imageView"
+        android:id="@+id/loginstruction"
         android:layout_width="400dp"
         android:layout_height="200dp"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -189,5 +109,46 @@
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.51"
         app:srcCompat="@drawable/log_instruction" />
+
+    <EditText
+        android:id="@+id/woodspecie"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:inputType="textPersonName"
+        android:hint = "Select units to start"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.089"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.715" />
+
+    <Button
+        android:id="@+id/calculate"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:onClick="calculate"
+        android:text="Let's Go!"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.795"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.714" />
+
+    <TextView
+        android:id="@+id/result"
+        android:layout_width="243dp"
+        android:layout_height="77dp"
+        android:lineSpacingExtra="11sp"
+        android:text="Select units to start"
+        android:textAlignment="center"
+        android:textSize="22sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.856" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

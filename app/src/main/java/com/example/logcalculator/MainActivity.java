@@ -18,6 +18,7 @@ public class MainActivity extends AppCompatActivity {
     private EditText diameter2input;
     private EditText lengthinput;
     private EditText moistureinput;
+    private EditText woodspecieinput;
     private String volumeunit;
     private String weightunit;
     private TextView resultoutput;
@@ -30,6 +31,7 @@ public class MainActivity extends AppCompatActivity {
         diameter2input = (EditText)findViewById(R.id.diameter2);
         lengthinput = (EditText)findViewById(R.id.length);
         moistureinput = (EditText)findViewById(R.id.water);
+        woodspecieinput = (EditText)findViewById(R.id.woodspecie);
         resultoutput = findViewById(R.id.result);
         densitypermoisture = 0;
         drydensity = 0;
@@ -43,6 +45,7 @@ public class MainActivity extends AppCompatActivity {
     diameter2input.setHint("Diameter 2 (m)");
     lengthinput.setHint("Length (m)");
     moistureinput.setHint("Moisture Content (%)");
+    woodspecieinput.setHint("Wood Type");
     resultoutput.setText("Volume (m^3)\nWeight (kg)");
     volumeunit = "m^3";
     weightunit = "kg";
@@ -54,51 +57,60 @@ public class MainActivity extends AppCompatActivity {
     diameter2input.setHint("Diameter 2 (inch)");
     lengthinput.setHint("Length (ft)");
     moistureinput.setHint("Moisture Content (%)");
+    woodspecieinput.setHint("Wood Type");
     resultoutput.setText("Volume (ft^3)\nWeight (lb)");
     volumeunit = "ft^3";
     weightunit = "lb";
     }
 
-    public void oak(View v){
-        densitypermoisture = 3.8;
-        drydensity = 597;
-    }
-
-    public void pine(View v){
-        densitypermoisture = 2;
-        drydensity = 425;
-    }
-
-    public void cherry(View v){
-        densitypermoisture = 2;
-        drydensity = 521;
-    }
-
-    public void ash(View v){
-        densitypermoisture = 2.6;
-        drydensity = 589;
-    }
-
     public void calculate(View v){
         if(unitswitch==0)
             resultoutput.setText("Please Select a Unit System!");
-        else if(densitypermoisture==0)
-            resultoutput.setText("Please Select a Type of Tree!");
         else{
-            double diameter1 = Double.parseDouble(diameter1input.getText().toString());
-            double diameter2 = Double.parseDouble(diameter2input.getText().toString());
-            if(unitswitch==-1) {
-                diameter1*=0.0833333333;
-                diameter2*=0.0833333333;
-                densitypermoisture*=0.062428;
-                drydensity*=0.062428;
+            String woodspecie = woodspecieinput.getText().toString();
+            int woodspecievalid = 1;
+            
+            if(woodspecie.equalsIgnoreCase("red oak")){
+                densitypermoisture = 3.8;
+                drydensity = 597;
             }
-            double length = Double.parseDouble(lengthinput.getText().toString());
-            double moisture = Double.parseDouble(moistureinput.getText().toString());
-            double volume = (3.14159265359*length*(diameter1*diameter1+diameter2*diameter2+diameter1*diameter2))/3;
-            double weight = volume*(drydensity+densitypermoisture*moisture);
-            DecimalFormat onedeciplace = new DecimalFormat("#.#");
-            resultoutput.setText("Volume: "+onedeciplace.format(volume)+" "+volumeunit+"\n"+"Weight: "+onedeciplace.format(weight)+" "+weightunit);
+            else if(woodspecie.equalsIgnoreCase("lodgepole pine")){
+                densitypermoisture = 2;
+                drydensity = 425;
+            }
+            else if(woodspecie.equalsIgnoreCase("black cherry")){
+                densitypermoisture = 2;
+                drydensity = 521;
+            }
+            else if(woodspecie.equalsIgnoreCase("green ash")){
+                densitypermoisture = 2.6;
+                drydensity = 589;
+            }
+            else if(woodspecie.equalsIgnoreCase("black walnut")){
+                densitypermoisture = 3.8;
+                drydensity = 533;
+            }
+            else
+                woodspecievalid = -1;
+
+            if(woodspecievalid == 1) {
+                double diameter1 = Double.parseDouble(diameter1input.getText().toString());
+                double diameter2 = Double.parseDouble(diameter2input.getText().toString());
+                if (unitswitch == -1) {
+                    diameter1 *= 0.0833333333;
+                    diameter2 *= 0.0833333333;
+                    densitypermoisture *= 0.062428;
+                    drydensity *= 0.062428;
+                }
+                double length = Double.parseDouble(lengthinput.getText().toString());
+                double moisture = Double.parseDouble(moistureinput.getText().toString());
+                double volume = (3.14159265359 * length * (diameter1 * diameter1 + diameter2 * diameter2 + diameter1 * diameter2)) / 3;
+                double weight = volume * (drydensity + densitypermoisture * moisture);
+                DecimalFormat onedeciplace = new DecimalFormat("#.#");
+                resultoutput.setText("Volume: " + onedeciplace.format(volume) + " " + volumeunit + "\n" + "Weight: " + onedeciplace.format(weight) + " " + weightunit);
+            }
+            else
+                resultoutput.setText("Sorry, we cannot find the type of wood you want");
             }
         }
 }
