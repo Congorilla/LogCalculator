@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "928655818063",
+    "firebase_url": "https://congo-b4d7e.firebaseio.com",
+    "project_id": "congo-b4d7e",
+    "storage_bucket": "congo-b4d7e.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:928655818063:android:29bb15ed3bcd91736d593a",
+        "android_client_info": {
+          "package_name": "com.example.logcalculator"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "928655818063-rbn07ubh816u52nvm204gusnbcm1au4r.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.logcalculator",
+            "certificate_hash": "fa76687bdef9911d12603e3b96b72ddcf3609d0f"
+          }
+        },
+        {
+          "client_id": "928655818063-hgb8j36mqajfbv8p09bf9n71g2fb22f1.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAoq0ezAwl41qSmmAPshW3BX21sNg2SoM8"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "928655818063-hgb8j36mqajfbv8p09bf9n71g2fb22f1.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
